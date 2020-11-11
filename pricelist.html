@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css-voorbeeld/main.css">
+    <title>Prijzen</title>
+</head>
+<body>
+    <div id="background"></div>
+    <header>
+        <a href="index.html"><img id="logo" src="assets/logo.svg"></a>
+        <nav>
+            <button >
+                <svg id="menu" viewBox="0 0 30 30">
+                    <g id="Group_1" data-name="Group 1" transform="translate(-326.5 -7)">
+                        <path id="Path_3" data-name="Path 3" d="M2.137,0H36" transform="translate(326.5 34.5)" fill="none" stroke="#3E4450" stroke-width="3"/>
+                        <line id="Line_2" data-name="Line 2" x2="36" transform="translate(326.5 8.5)" fill="none" stroke="#3E4450" stroke-width="3"/>
+                        <line id="Line_1" data-name="Line 1" x2="29" transform="translate(333.5 21.5)" fill="none" stroke="#3E4450" stroke-width="3"/>
+                    </g>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="services.html">Behandelingen </a></li>
+                <li><a class="active" href="pricelist.html">Prijzen</a></li>
+                <li><a href="aboutme.html">Over Mij</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="background-2"></div>
+        <h1>Prijzen</h1>
+        <section class="pricelist"></section>
+            <h2>Manicure</h2>
+            <p class="tag">Acrylnagels</p><p class="price">€ 30,-</p>
+            <p class="tag">Gellak</p><p class="price">€ 15,-</p>
+        <section class="pricelist">
+            <h2>Pedicure</h2>
+            <p class="tag">Pedicure</p><p class="price">€ 30,-</p>
+            <p class="tag">Pedicure met gellak</p><p class="price">€ 40,-</p>
+        </section>
+        <section class="pricelist">
+            <h2>Waxen</h2>
+            <p class="tag">Benen</p><p class="price">€ 15,-</p>
+            <p class="tag"></p>Armen<p class="price">€ 10,-</p>
+            <p class="tag"></p>Oksels<p class="price">€ 10,-</p>
+            <p class="tag"></p>Bikinlijn<p class="price">€ 10,-</p>
+            <p class="tag"></p>Wenkbrauwen<p class="price">€ 10,-</p>
+            <p class="tag"></p>Bovenlip/Kin/Wangen<p class="price">€ 10,-</p>
+        </section>
+        <section class="pricelist">
+            <h2>Wimperextensions</h2>
+            <p class="tag">One by one</p> <p class="price">€ 40,-</p>
+            <p class="tag">Volume lashes</p> <p class="price">€ 50,-</p>
+        </section>
+        <section class="pricelist">
+            <h2>Wimpers & Wenkbrauwen</h2>
+            <p class="tag">Epileren</p><p class="price">€ 5,-</p>
+            <p class="tag">Verven</p><p class="price">€ 8,-</p>
+            <p class="tag">Hennabrows</p><p class="price">€ 25,-</p>
+            <p class="tag">Hennabrows & waxen</p><p class="price">€ 30,-</p>
+        </section>
+        
+    </main>
+    <footer>
+        <p> MKBeatymoments , Seringenstraat 52, 6101 NJ Echt </p>
+        <p>&copy; <span id="year"></span> </p>
+    </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+</html>
