@@ -79,7 +79,7 @@ Uitdagingen liggen bij de vormgeving op verschillende grootes van schermen en de
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-![Landingspagina](images/Landing page.png)
+![Landingspagina](images/Landingpage.png)
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
