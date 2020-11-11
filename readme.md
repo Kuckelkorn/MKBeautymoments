@@ -79,8 +79,7 @@ Uitdagingen liggen bij de vormgeving op verschillende grootes van schermen en de
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/Landing page" width="375px" alt="Landingspagina">
+![Landingspagina](images/Landing page.png)
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/dummy-plaatje.svg" width="375px" alt="omschrijving van de pagina">
