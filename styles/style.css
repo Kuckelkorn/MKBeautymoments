@@ -1,5 +1,162 @@
 /* CSS Document */
+:root{
+  --color-gblue: #3E4450;
+  --color-dblue: #07080B;
+  --color-lpink: #EACDC9; 
+}
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, a {
+  font-family: 'Cormorant Garamond', 'serif';
+  font-style: normal;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  overflow: hidden;
+  z-index: -8;
+}
+
+#background::before {
+  content: "";
+  position: absolute;
+  background: url(../assets/artwork.svg) -14em no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  background-size: cover;
+  z-index: -2;
+}
+
+header {
+  display: flex;
+  margin: 1.5em;
+  justify-content: space-between;
+}
+
+header #logo{
+  height: 35px;
+}
+
+header #menu{
+  height: 35px;
+}
+
+header ul{
+  display: none;
+}
+
+header button{
+  border-style: none;
+  background: none;
+}
+
+main{
+  text-align: center;
+  overflow-x: hidden;
+}
+main h1{
+  position: absolute;
+  top: 30%;
+  transform: translateY(-30%);
+  width: 100%;
+  font-size: 2.8em;
+  font-weight: 500;
+  color: var(--color-gblue);
+}
+
+main h1 b{
+  font-weight: 700;
+  color: var(--color-dblue);
+}
+
+main .images{
+  width: 100%;
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+main .images .img-1, main .images .img-2{
+  background: var(--color-lpink);
+}
+
+main .images .img-1 img, main .images .img-2 img{
+  object-fit: cover;
+  height: 100%;
+  opacity: 45%;
+}
+
+main .images .img-2{
+  display: none;
+}
+
+main .images #salon{
+  position: absolute;
+  top: 0;
+  left: 60%;
+  height: 100%;
+  z-index: -1;
+}
+
+main .cta{
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  top: 55%;
+  width: 100%;
+}
+
+main .cta a{
+  text-decoration: none;
+  color: var(--color-gblue);
+  position: relative;
+  font-size: 1.8em;
+  width: 100%;
+  line-height: 5rem;
+  margin: 0 20%; 
+}
+
+main .cta .link1::before{
+  content: "";
+  position: absolute;
+  border: solid;
+  color: var(--color-gblue);
+  width: 7em;
+  height: 1.6em;
+  top: 0.5em;
+  left: -1em;
+}
+
+main aside{
+  display: none;
+}
+
+footer{
+  position: relative;
+  background-color:var(--color-gblue);
+  color: var(--color-lpink);
+  text-align: center;
+  padding: .9em 1.5em;
+  font-size: .9em;
+  line-height: 30%;
+  width: 100%;
+}
+
+@media (min-height: 800px){
+  footer{
+    position: absolute;
+    bottom: 0;
+  }
+}
