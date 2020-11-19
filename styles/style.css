@@ -13,8 +13,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1, a {
@@ -38,19 +37,61 @@ header {
   display: flex;
   margin: 1.5em;
   justify-content: space-between;
+  align-items: center;
 }
 
 header #logo{
   height: 35px;
 }
 
-header #menu{
+header nav #open{
   height: 35px;
 }
 
-header ul{
+header nav #close{
   display: none;
 }
+
+header nav #close.active{
+  display: initial;
+  position: absolute;
+  z-index: 6;
+  height: 5em;
+  top:0;
+}
+
+header nav ul{
+  display: none;
+}
+
+header nav ul.active{
+  position: absolute;
+  display: initial;
+  height: 100vh;
+  background-color: var(--color-lpink);
+  width: 100%;
+  z-index: 4;
+  left: 0;
+  top: -1em;
+  overflow-y: hidden;
+}
+header nav ul li{
+  list-style: none;
+}
+header nav ul.active li:first-of-type{
+  margin-top: 5em;
+}
+
+header nav li a{
+  text-decoration: none;
+  color: var(--color-dblue);
+}
+
+header nav .active li a{
+  font-size: 3.5em;
+  line-height: 2em;
+}
+
 
 header button{
   border-style: none;
@@ -69,6 +110,7 @@ main h1{
   font-size: 2.8em;
   font-weight: 500;
   color: var(--color-gblue);
+  padding: 1em;
 }
 
 main h1 b{
@@ -76,32 +118,27 @@ main h1 b{
   color: var(--color-dblue);
 }
 
-main .images{
-  width: 100%;
-  position: relative;
-  height: 80vh;
-  overflow: hidden;
-}
 
-main .images .img-1, main .images .img-2{
+main .img-1, main .img-2{
   background: var(--color-greyp);
+  overflow: hidden;
+  height: 80vh;
+  position: absolute;
 }
 
-main .images .img-1 img, main .images .img-2 img{
+main  .img-1 img, main .img-2 img{
   object-fit: cover;
   height: 100%;
   opacity: 45%;
 }
 
-main .images .img-2{
+main .img-2{
   display: none;
 }
 
-main .images #salon{
-  position: absolute;
-  top: 0;
+main  #salon{
+  top: 4em;
   left: 60%;
-  height: 100%;
   z-index: -1;
 }
 
@@ -148,6 +185,66 @@ footer{
   font-size: .9em;
   line-height: 30%;
   width: 100%;
+}
+
+@media (min-width: 40em){
+
+  header{
+    margin-top: 0;
+  }
+  header nav #menu{
+    display: none;
+  }
+
+  header nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+
+  header nav ul li a {
+    width: 100%;
+    font-size: 1em;
+    line-height: 1em;
+    margin-left: 1em;
+  }
+
+  main h1{
+    width: 75%;
+    top:30%;
+    transform: translateY(-30%);
+    font-size: 3em;
+  }
+
+  main .cta{
+    top:65%;
+    transform: translateY(-65%);
+    text-align: left;
+  }
+  main .cta .link1{
+    width: 45%;
+    padding: 0;
+  }
+  main .cta .link2{
+    width: 45%;
+    padding: 0;
+  }
+
+  main aside{
+    display: initial;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+
+  main aside figure{
+    width: 35px;
+    padding: 0;
+    margin: 1em;
+  }
 }
 
 @media (min-height: 800px){
