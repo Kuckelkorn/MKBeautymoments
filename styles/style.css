@@ -1,12 +1,15 @@
 /* CSS Document */
-:root{
+:root {
   --color-gblue: #3E4450;
   --color-dblue: #07080B;
-  --color-lpink: #EACDC9; 
+  --color-lpink: #EACDC9;
   --color-greyp: #F9F2F1;
 }
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
@@ -14,11 +17,6 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-}
-
-h1, a {
-  font-family: 'Cormorant Garamond', 'serif';
-  font-style: normal;
 }
 
 body::before {
@@ -33,40 +31,59 @@ body::before {
   top: -3em;
 }
 
+h1,
+a {
+  font-family: 'Cormorant Garamond', 'serif';
+  font-style: normal;
+}
+
+
+/* //////////////////
+///////HEADER///////
+//////////////////// */
+
 header {
+  position: relative;
   display: flex;
-  margin: 1.5em;
   justify-content: space-between;
   align-items: center;
+  height: 10vh;
 }
 
-header #logo{
+/* LOGO */
+
+header #logo {
   height: 35px;
+  margin: 1.5em;
 }
 
-header nav #open{
+/* NAVIGATION */
+
+header nav #open {
   height: 35px;
+  margin: 1.5em;
 }
 
-header nav #close{
+header nav #close {
   display: none;
-}
-
-header nav #close.active{
-  display: initial;
   position: absolute;
   z-index: 6;
-  height: 5em;
-  top:0;
+  height: 35px;
+  top: 1.5em;
+  right: 3.5em;
 }
 
-header nav ul{
+header nav .active #close {
+  display: inline-block;
+}
+
+header nav ul {
   display: none;
 }
 
-header nav ul.active{
+header nav ul.active {
   position: absolute;
-  display: initial;
+  display: inline-block;
   height: 100vh;
   background-color: var(--color-lpink);
   width: 100%;
@@ -75,37 +92,47 @@ header nav ul.active{
   top: -1em;
   overflow-y: hidden;
 }
-header nav ul li{
+
+header nav ul li {
   list-style: none;
 }
-header nav ul.active li:first-of-type{
+
+header nav ul.active li:first-of-type {
   margin-top: 5em;
 }
 
-header nav li a{
+header nav li a {
   text-decoration: none;
   color: var(--color-dblue);
 }
 
-header nav .active li a{
-  font-size: 3.5em;
+header nav .active li a {
+  font-size: 2em;
   line-height: 2em;
 }
 
 
-header button{
+header button {
   border-style: none;
   background: none;
 }
 
-main{
+/* //////////////////
+////////MAIN/////////
+//////////////////// */
+
+main {
+  position: relative;
+  width: 100%;
+  height: 80vh;
   text-align: center;
   overflow-x: hidden;
 }
-main h1{
+
+main h1 {
   position: absolute;
-  top: 30%;
-  transform: translateY(-30%);
+  top: 10%;
+  transform: translateY(-10%);
   width: 100%;
   font-size: 2.8em;
   font-weight: 500;
@@ -113,36 +140,35 @@ main h1{
   padding: 1em;
 }
 
-main h1 b{
+main h1 b {
   font-weight: 700;
   color: var(--color-dblue);
 }
 
 
-main .img-1, main .img-2{
+main .img-1,
+main .img-2 {
   background: var(--color-greyp);
-  overflow: hidden;
-  height: 80vh;
   position: absolute;
 }
 
-main  .img-1 img, main .img-2 img{
+main .img-1 img,
+main .img-2 img {
   object-fit: cover;
-  height: 100%;
+  height: 75vh;
   opacity: 45%;
 }
 
-main .img-2{
+main .img-2 {
   display: none;
 }
 
-main  #salon{
-  top: 4em;
+main #salon {
   left: 60%;
   z-index: -1;
 }
 
-main .cta{
+main .cta {
   position: absolute;
   text-align: center;
   display: flex;
@@ -151,52 +177,57 @@ main .cta{
   width: 100%;
 }
 
-main .cta a{
+main .cta a {
   text-decoration: none;
   color: var(--color-gblue);
   position: relative;
   font-size: 1.8em;
   width: 100%;
-  line-height: 5rem;
-  margin: 0 20%; 
+  line-height: 3rem;
+  margin: 0 20%;
 }
 
-main .cta .link1::before{
+main .cta .link1 p::before {
   content: "";
   position: absolute;
   border: solid;
   color: var(--color-gblue);
   width: 7em;
   height: 1.6em;
-  top: 0.5em;
+  top: 1em;
   left: -1em;
 }
 
-main aside{
+main aside {
   display: none;
 }
 
-footer{
+footer {
   position: relative;
-  background-color:var(--color-gblue);
+  width: 100%;
+  height: 10vh;
+}
+
+footer {
+  background-color: var(--color-gblue);
   color: var(--color-lpink);
   text-align: center;
   padding: .9em 1.5em;
   font-size: .9em;
   line-height: 30%;
-  width: 100%;
 }
 
-@media (min-width: 40em){
+@media (min-width: 40em) {
 
-  header{
+  header {
     margin-top: 0;
   }
-  header nav #menu{
+
+  header nav #open {
     display: none;
   }
 
-  header nav ul{
+  header nav ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -210,28 +241,34 @@ footer{
     margin-left: 1em;
   }
 
-  main h1{
+  header nav ul li a:last-of-type {
+    margin-right: 1.5em;
+  }
+
+  main h1 {
     width: 75%;
-    top:30%;
+    top: 30%;
     transform: translateY(-30%);
     font-size: 3em;
   }
 
-  main .cta{
-    top:65%;
+  main .cta {
+    top: 65%;
     transform: translateY(-65%);
     text-align: left;
   }
-  main .cta .link1{
-    width: 45%;
-    padding: 0;
-  }
-  main .cta .link2{
+
+  main .cta .link1 {
     width: 45%;
     padding: 0;
   }
 
-  main aside{
+  main .cta .link2 {
+    width: 45%;
+    padding: 0;
+  }
+
+  main aside {
     display: initial;
     position: absolute;
     background-color: white;
@@ -240,16 +277,26 @@ footer{
     transform: translateY(-40%);
   }
 
-  main aside figure{
+  main aside figure {
     width: 35px;
     padding: 0;
     margin: 1em;
   }
 }
 
-@media (min-height: 800px){
-  footer{
-    position: absolute;
-    bottom: 0;
+@media (min-height: 800px) {
+  header {
+    height: 10vh;
   }
+
+  main {
+    min-height: 85vh;
+    max-height: 82vh;
+  }
+
+  footer {
+    min-height: 5vh;
+    max-height: 8vh;
+  }
+
 }

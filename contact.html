@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css-voorbeeld/main.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <title>Contact</title>
 </head>
 <body>
-    <div id="background"></div>
     <header>
         <a href="index.html"><img id="logo" src="assets/logo.svg"></a>
         <nav>
-            <button >
-                <svg id="menu" viewBox="0 0 30 30">
+            <button id="menuOpen">
+                <svg id="open" viewBox="0 0 30 30">
                     <g id="Group_1" data-name="Group 1" transform="translate(-326.5 -7)">
-                        <path id="Path_3" data-name="Path 3" d="M2.137,0H36" transform="translate(326.5 34.5)" fill="none" stroke="#3E4450" stroke-width="3"/>
-                        <line id="Line_2" data-name="Line 2" x2="36" transform="translate(326.5 8.5)" fill="none" stroke="#3E4450" stroke-width="3"/>
-                        <line id="Line_1" data-name="Line 1" x2="29" transform="translate(333.5 21.5)" fill="none" stroke="#3E4450" stroke-width="3"/>
+                        <path id="Path_3" data-name="Path 3" d="M2.137,0H36" transform="translate(326.5 34.5)"
+                            fill="none" stroke="#3E4450" stroke-width="2" />
+                        <line id="Line_2" data-name="Line 2" x2="36" transform="translate(326.5 8.5)" fill="none"
+                            stroke="#3E4450" stroke-width="2" />
+                        <line id="Line_1" data-name="Line 1" x2="29" transform="translate(333.5 21.5)" fill="none"
+                            stroke="#3E4450" stroke-width="2" />
                     </g>
                 </svg>
             </button>
-            <ul>
-                <li><a href="services.html">Behandelingen </a></li>
-                <li><a href="pricelist.html">Prijzen</a></li>
-                <li><a href="aboutme.html">Over Mij</a></li>
-                <li><a class="active" href="contact.html">Contact</a></li>
+            <button id="menuClose">
+                <svg id="close" viewBox="0 0 42.07 42.07">
+                    <g id="Group_53" data-name="Group 53" transform="translate(-1149.283 8665.717)">
+                        <line id="Line_1" data-name="Line 1" x2="49.497"
+                            transform="translate(1152.819 -8662.182) rotate(45)" fill="none" stroke="#69707e"
+                            stroke-linecap="round" stroke-width="5" />
+                        <line id="Line_2" data-name="Line 2" x2="49.497"
+                            transform="translate(1152.819 -8627.182) rotate(-45)" fill="none" stroke="#69707e"
+                            stroke-linecap="round" stroke-width="5" />
+                    </g>
+                </svg>
+            </button>
+            <ul id="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="services.html">Behandelingen </a> </li>
+                <li> <a href="pricelist.html">Prijzen</a> </li>
+                <li> <a href="aboutme.html">Over Mij</a> </li>
+                <li> <a href="contact.html">Contact</a> </li>
             </ul>
         </nav>
     </header>
@@ -33,10 +51,9 @@
     </main>
     <footer>
         <p> MKBeatymoments , Seringenstraat 52, 6101 NJ Echt </p>
-        <p>&copy; <span id="year"></span> </p>
+        <p id="year"> &copy; 2020</p>
     </footer>
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
+    <script src="scripts/year.js"></script>
+    <script src="scripts/hamburgerMenu.js"></script>
 </body>
 </html>
