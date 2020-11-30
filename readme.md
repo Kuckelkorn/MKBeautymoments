@@ -38,11 +38,27 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Wat ging goed. Opdrachten waren relatief makkelijk te maken ook de zwarte piste opdrachten. Zelf had ik al redelijk veel van te voren al af gezien mijn opdracht. Aangezien ik al bezig was met het maken van een website en de mogelijkheid had om het bij dit vak af te maken. Het meest lastige blijft toch het blijven tweaken van de css om het helemaal naar je wens te krijgen. 
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent met korte uitleg-
+> ![Landingspagina](images/lpMobiel.png)
+>
+> Landingspagina in mobiele vorm in HTML & CSS al bijna af. Alleen nog lichtelijk tweaken. 
+
+> ![Hamburgermenu](images/hamburger.png)
+>
+> Werkend hamburgermenu alleen nog animaties toevoegen.
+
+> ![Landingspagina](images/lpDesktop.png)
+>
+> Landingspagina op desktop formaat. Er zitten al breakpoints in het ontwerp met mediaqueries. Hier moet ik nog iets meer aan tweaken om het helemaal naar wens te krijgen. Vooral erg aanwezig als ik de website op fullscreen heb met een flinke browser breedte
+
+> ![Prijslijst](images/prijslijst.png) ![Contactpagina](images/contact.png)
+>
+> Prijslijst & Contactpagina bijna klaar met de HTML alleen nog een CTA toevoegen aan de prijslijst. Voor de rest nog volledig stylen met CSS.  
+
+
 
 ### Agenda voor meeting
 
