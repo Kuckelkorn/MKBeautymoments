@@ -34,8 +34,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 Iets minder gedaan dan bij de eerste voortgang. Vooral bij de lessen gekeken naar elementen die ik kan meenemen en de feedback grotendeels verwerkt na het eerste gesprek.
 
+### Bespreken voor meeting
 
-
+Transitions weghalen bij scalen? Netter
+Table headings bug laden niet zoals de bedoeling is
+3 Foto's als achtergrond alleen maar css?
 ## Voortgang 1 (week 3)
 
 ### Stand van zaken
