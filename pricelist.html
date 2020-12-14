@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap"
@@ -14,30 +14,6 @@
     <header>
         <a href="index.html"><img id="logo" src="assets/logo.svg"></a>
         <nav>
-            <button id="menuOpen">
-                <svg id="open" viewBox="0 0 30 30">
-                    <g id="Group_1" data-name="Group 1" transform="translate(-326.5 -7)">
-                        <path id="Path_3" data-name="Path 3" d="M2.137,0H36" transform="translate(326.5 34.5)"
-                            fill="none" stroke="#3E4450" stroke-width="2" />
-                        <line id="Line_2" data-name="Line 2" x2="36" transform="translate(326.5 8.5)" fill="none"
-                            stroke="#3E4450" stroke-width="2" />
-                        <line id="Line_1" data-name="Line 1" x2="29" transform="translate(333.5 21.5)" fill="none"
-                            stroke="#3E4450" stroke-width="2" />
-                    </g>
-                </svg>
-            </button>
-            <button id="menuClose">
-                <svg id="close" viewBox="0 0 42.07 42.07">
-                    <g id="Group_53" data-name="Group 53" transform="translate(-1149.283 8665.717)">
-                        <line id="Line_1" data-name="Line 1" x2="49.497"
-                            transform="translate(1152.819 -8662.182) rotate(45)" fill="none" stroke="#69707e"
-                            stroke-linecap="round" stroke-width="5" />
-                        <line id="Line_2" data-name="Line 2" x2="49.497"
-                            transform="translate(1152.819 -8627.182) rotate(-45)" fill="none" stroke="#69707e"
-                            stroke-linecap="round" stroke-width="5" />
-                    </g>
-                </svg>
-            </button>
             <ul id="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li> <a href="services.html">Behandelingen </a> </li>
@@ -47,100 +23,105 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div id="background-2"></div>
+    <main id="pricelist">
         <h1>Prijzen</h1>
-        <section class="pricelist"></section>
-        <h2>Manicure</h2>
         <table class="prices">
+            <thead>
+                <p>Manicure</p>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tag">Acrylnagels</td>
+                    <td class="price">€ 30,-</td>
+                </tr>
+                <tr>
+                    <td class="tag">Gellak</td>
+                    <td class="price">€ 15,-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="prices">
+            <thead>
+                <p>Pedicure</p>
+            </thead>
             <tr>
-                <th class="tag">Acrylnagels</th>
-                <th class="price">€ 30,-</th>
+                <td class="tag">Pedicure</td>
+                <td class="price">€ 30,-</td>
             </tr>
             <tr>
-                <th class="tag">Gellak</th>
-                <th class="price">€ 15,-</th>
+                <td class="tag">Pedicure met gellak</td>
+                <td class="price">€ 40,-</td>
             </tr>
         </table>
-        <section class="pricelist">
-            <h2>Pedicure</h2>
-            <table class="prices">
-                <tr>
-                    <th class="tag">Pedicure</th>
-                    <th class="price">€ 30,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Pedicure met gellak</th>
-                    <th class="price">€ 40,-</th>
-                </tr>
-            </table>
+        <table class="prices">
+            <thead>
+                <p>Waxen</p>
+            </thead>
+            <tr>
+                <td class="tag">Benen</td>
+                <td class="price">€ 15,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Armen</td>
+                <td class="price">€ 10,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Oksels</td>
+                <td class="price">€ 10,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Bikinlijn</td>
+                <td class="price">€ 10,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Wenkbrauwen</td>
+                <td class="price">€ 10,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Bovenlip / Kin / Wangen</td>
+                <td class="price">€ 10,-</td>
+            </tr>
+        </table>
+        <table class="prices">
+            <thead>
+                <p>Wimperextensions</p>
+            </thead>
+            <tr>
+                <td class="tag">One by one</td>
+                <td class="price">€ 40,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Volume lashes</td>
+                <td class="price">€ 50,-</td>
+            </tr>
+        </table>
+        <table class="prices">
+            <thead>
+                <p>Wimpers & Wenkbrauwen</p>
+            </thead>
+            <tr>
+                <td class="tag">Epileren</td>
+                <td class="price">€ 5,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Verven</td>
+                <td class="price">€ 8,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Hennabrows</td>
+                <td class="price">€ 25,-</td>
+            </tr>
+            <tr>
+                <td class="tag">Hennabrows & waxen</td>
+                <td class="price">€ 30,-</td>
+            </tr>
+        </table>
+        <section class="cta">
+            <a class="link1" href="contact.html">
+                <p>Maak een afspraak!</p>
+            </a>
         </section>
-        <section class="pricelist">
-            <h2>Waxen</h2>
-            <table class="prices">
-                <tr>
-                    <th class="tag">Benen</th>
-                    <th class="price">€ 15,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Armen</th>
-                    <th class="price">€ 10,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Oksels</th>
-                    <th class="price">€ 10,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Bikinlijn</th>
-                    <th class="price">€ 10,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Wenkbrauwen</th>
-                    <th class="price">€ 10,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Bovenlip / Kin / Wangen</th>
-                    <th class="price">€ 10,-</th>
-                </tr>
-            </table>
-        </section>
-        <section class="pricelist">
-            <h2>Wimperextensions</h2>
-            <table class="prices">
-                <tr>
-                    <th class="tag">One by one</th>
-                    <th class="price">€ 40,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Volume lashes</th>
-                    <th class="price">€ 50,-</th>
-                </tr>
-            </table>
-        </section>
-        <section class="pricelist">
-            <h2>Wimpers & Wenkbrauwen</h2>
-            <table class="prices">
-                <tr>
-                    <th class="tag">Epileren</th>
-                    <th class="price">€ 5,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Verven</th>
-                    <th class="price">€ 8,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Hennabrows</th>
-                    <th class="price">€ 25,-</th>
-                </tr>
-                <tr>
-                    <th class="tag">Hennabrows & waxen</th>
-                    <th class="price">€ 30,-</th>
-                </tr>
-            </table>
-        </section>
-        <a class="link1" href="contact.html">
-            <p>Maak een afspraak!</p>
-        </a>
+
     </main>
     <footer>
         <p> MKBeatymoments , Seringenstraat 52, 6101 NJ Echt </p>

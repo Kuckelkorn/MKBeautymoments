@@ -30,7 +30,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+### Stand van zaken
+
+Iets minder gedaan dan bij de eerste voortgang. Vooral bij de lessen gekeken naar elementen die ik kan meenemen en de feedback grotendeels verwerkt na het eerste gesprek.
 
 
 
@@ -72,7 +74,7 @@ Wat ging goed. Opdrachten waren relatief makkelijk te maken ook de zwarte piste 
 
 ### Verslag van meeting
 
--na afloop snel uitkomsten vastleggen-
+Denk aan de tags bij adres enzo ipv paragrafen. maak email en telefoonnummer klikbaar. Kijk of je naar de plaatjes kunt kijken die niet relevant zijn voor de inhoud om die op een andere manier weer te geven in de css, vooral op de index pagina. Table headings voor de prijsinformatie om dat nog netter te maken. Kijk nog een keer naar de styling of het niet nog netter kan. Kijk of je display grid en flex kunt combineren om het nog strakker te maken. Bij de navigatie zijn de verschillende buttons niet nodig, probeer het klikbaar te maken met javascript. Dit is vooral handig omdat de buttons niet nodig zijn op een desktop display dus dan hoeven ze ook niet te worden ingeladen als HTML zijnde.
 
 
 

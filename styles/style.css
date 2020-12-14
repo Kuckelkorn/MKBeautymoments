@@ -12,13 +12,19 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+}
+
+body {
   font-family: 'Cormorant Garamond', 'serif';
   font-style: normal;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -39,11 +45,7 @@ body::before {
 //////////////////// */
 
 header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
+  grid-column: 1/ -1;
 }
 
 /* LOGO */
@@ -55,67 +57,56 @@ header #logo {
 
 /* NAVIGATION */
 
-header nav #open {
-  height: 35px;
-  margin: 1.5em;
-}
-
-
-
-header nav #menuClose {
-  display: none;
-}
-
-header nav #close {
-  position: absolute;
-  z-index: 6;
-  height: 35px;
-  top: 1.5em;
-  right: 3.5em;
-}
-
-header nav #menuClose.active {
-  display: inline;
-}
-
 header nav ul {
-  display: none;
-}
-
-header nav ul.active {
-  position: absolute;
-  display: inline-block;
-  height: 100vh;
-  background-color: var(--color-lpink);
   width: 100%;
-  z-index: 4;
-  left: 0;
+  height: 100%;
+  background-color: var(--color-lpink);
+  position: absolute;
   top: -1em;
-  overflow-y: hidden;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  padding-top: 7em;
+  transform: translateX(100%);
 }
 
 header nav ul li {
   list-style: none;
+  color: var(--color-gblue);
+  font-size: 2em;
+  padding-top: .5em;
 }
 
-header nav ul.active li:first-of-type {
-  margin-top: 5em;
+
+header nav ul::before {
+  content: "☰";
+  position: absolute;
+  display: inline-block;
+  left: -20%;
+  top: 10px;
+  font-size: 3.5em;
+  color: var(--color-gblue);
+}
+
+header nav ul.active::before {
+  content: "X";
+  position: absolute;
+  display: inline-block;
+  left: 80%;
+  top: 10px;
+  font-size: 3.5em;
+  color: var(--color-gblue);
+}
+
+
+header nav ul.active {
+  transform: translateX(0);
+  transition: .5s;
 }
 
 header nav li a {
   text-decoration: none;
-  color: var(--color-dblue);
-}
-
-header nav .active li a {
-  font-size: 2em;
-  line-height: 2em;
-}
-
-
-header button {
-  border-style: none;
-  background: none;
+  color: var(--color-gblue);
 }
 
 
@@ -124,91 +115,109 @@ header button {
 //////////////////// */
 
 main {
-  position: relative;
+  grid-column: 1/-1;
   width: 100%;
-  height: 80vh;
   overflow-x: hidden;
+  position: relative;
 }
 
-main.index {
-  text-align: center;
+main.index::after {
+  content: "";
+  background: url("../assets/salon.png") var(--color-lpink);
+  background-size: cover;
+  width: 40%;
+  height: 95%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  overflow-y: hidden;
 }
 
 main h1 {
-  width: 100%;
-  font-size: 2.8em;
+  margin-left: 1em;
+  font-size: 2.5em;
   font-weight: 500;
   color: var(--color-gblue);
-  padding: 0 1em;
 }
 
 main.index h1 {
-  position: absolute;
-  top: 10%;
-  transform: translateY(-10%);
-  padding: 1em;
+  position: relative;
+  text-align: center;
+  height: 7em;
+  padding: 2em 0 2em 0;
 }
 
 main.index h1 b {
-  font-weight: 700;
   color: var(--color-dblue);
 }
 
-main.index .img-1,
-main.index .img-2 {
-  background: var(--color-greyp);
-  position: absolute;
-  height: 75vh;
-}
-
-main.index .img-1 img,
-main.index .img-2 img {
-  object-fit: cover;
-  height: 100%;
-  opacity: 45%;
-}
-
-main.index .img-2 {
-  display: none;
-}
-
-main.index #salon {
-  left: 50%;
-  z-index: -2;
-}
-
 main .cta {
-  position: absolute;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  top: 55%;
+  flex-flow: row wrap;
+  justify-content: center;
   width: 100%;
-  padding: 1em;
+  align-items: baseline;
+  height: 10em;
+  margin: 2em 0 2em 0;
 }
 
-main .cta a {
+main a {
   text-decoration: none;
   color: var(--color-gblue);
-  position: relative;
-  font-size: 1.8em;
-  line-height: 3rem;
-  margin: 0 10%;
-  min-width: 8em;
+  font-size: 1.7em;
+  padding: 0 .8em 0 .8em;
 }
 
-main.index .cta .link1 p::before {
-  content: "";
-  position: absolute;
-  border: solid;
-  color: var(--color-gblue);
-  width: 7em;
-  height: 1.6em;
-  top: 1em;
-  left: 1.5em;
+main .link1 {
+  border: solid 2px var(--color-dblue);
+  line-height: 0;
+  margin-bottom: 1em;
 }
+
+main address {
+  line-height: 0;
+}
+
+main .info h2,
+p,
+a {
+  margin-left: 1em;
+}
+
+main address .address {
+  font-size: 1em;
+}
+
+main .message form label,
+input,
+textarea {
+  width: 100%;
+  margin: 1em;
+}
+
 
 main aside {
   display: none;
+}
+
+main#pricelist table {
+  padding: 0 1em 0 1em;
+  margin: 1em 0 1em 0;
+  width: 100%;
+}
+
+main table td {
+  color: var(--color-dblue);
+}
+
+main table td.tag {
+  text-align: left;
+}
+
+main table td.price {
+  text-align: right;
 }
 
 /* //////////////////
@@ -216,12 +225,8 @@ main aside {
 //////////////////// */
 
 footer {
-  position: relative;
+  grid-column: 1/-1;
   width: 100%;
-  height: 10vh;
-}
-
-footer {
   background-color: var(--color-gblue);
   color: var(--color-lpink);
   text-align: center;
@@ -230,119 +235,66 @@ footer {
   line-height: 30%;
 }
 
-@media(min-width:34em) {
-  main.index h1 {
-    top: 25%;
-    transform: translateY(-50%);
-  }
-
-  main.index .cta {
-    transform: translateY(-55%);
+@media(min-height:733px) {
+  footer.index {
+    position: absolute;
+    bottom: 0;
   }
 }
 
-@media (min-width: 45em) {
+@media(min-width:50em) {
 
   header {
-    margin-top: 0;
-  }
-
-  header nav #open {
-    display: none;
+    display: flex;
+    justify-content: space-between;
   }
 
   header nav ul {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    position: relative;
+    transform: translateX(0);
+    font-size: .5em;
+    margin-top: 2.6em;
+    padding: 1.5em;
+    background-color: transparent;
+    transition: 0s;
   }
 
-
-  header nav ul li a {
-    width: 100%;
-    font-size: 1em;
-    line-height: 1em;
-    margin-left: 1em;
+  header nav ul li {
+    margin-right: 1em;
   }
 
-  header nav ul li a:last-of-type {
-    margin-right: 1.5em;
+  header nav ul::before {
+    display: none;
+  }
+
+  header nav ul.active::before {
+    display: none;
   }
 
   main.index h1 {
-    top: 30%;
-    transform: translateY(-30%);
-    font-size: 3em;
+    padding: 3.5em;
   }
-
-  main .cta {
-    top: 65%;
-    transform: translateY(-65%);
-    text-align: left;
-    margin-top: 2em;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-
 
   main aside {
-    display: initial;
-    position: absolute;
+    display: inline;
     background-color: white;
+    position: absolute;
     right: 0;
-    top: 40%;
-    transform: translateY(-40%);
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   main aside figure {
-    width: 35px;
+    height: 50px;
+    width: 50px;
+    padding: 8px;
+    margin: 0;
+  }
+
+  main aside figure a {
+    font-size: 1em;
     padding: 0;
-    margin: 1em;
   }
-}
-
-@media(min-width:65em) {
-  main.index .img-2 {
-    display: inline;
-  }
-
-  main.index #salon {
-    height: 85%;
-  }
-
-  main.index #nails {
-    position: absolute;
-    left: 5%;
-    top: 0;
-    z-index: -3;
-    height: 75%;
-    transform: rotate(90deg);
-  }
-
-  main.index #eyes {
-    top: 33%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    transform: rotate(90deg);
-    height: 60%;
-    z-index: -1;
-  }
-}
-
-@media (min-height: 800px) {
-  header {
-    height: 10vh;
-  }
-
-  main {
-    min-height: 85vh;
-    max-height: 82vh;
-  }
-
-  footer {
-    min-height: 5vh;
-    max-height: 8vh;
-  }
-
 }
