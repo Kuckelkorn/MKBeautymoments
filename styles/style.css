@@ -1,4 +1,4 @@
-/* CSS Document */
+/* Variables */
 :root {
   --color-gblue: #3E4450;
   --color-dblue: #07080B;
@@ -6,6 +6,7 @@
   --color-greyp: #F9F2F1;
 }
 
+/* General */
 *,
 *::after,
 *::before {
@@ -16,7 +17,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 body {
@@ -30,13 +30,47 @@ body {
 body::before {
   content: "";
   position: absolute;
-  background: url(../assets/artwork.svg) -14em no-repeat;
+  background: url(../assets/artwork.svg) -14rem no-repeat;
   width: 100%;
   height: 100%;
   opacity: 30%;
   background-size: cover;
   z-index: -5;
-  top: -3em;
+  top: -3rem;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--color-gblue);
+  margin: 1em;
+  width: 100%;
+}
+
+h1 b {
+  font-weight: 700;
+  color: var(--color-dblue)
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: var(--color-gblue);
+}
+
+p {
+  font-size: 1em;
+  color: var(--color-dblue);
+}
+
+a {
+  font-size: 1em;
+  color: var(--color-gblue);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 
@@ -68,6 +102,7 @@ header nav ul {
   z-index: 3;
   padding-top: 7em;
   transform: translateX(100%);
+  transition: .5s;
 }
 
 header nav ul li {
@@ -83,7 +118,7 @@ header nav ul::before {
   position: absolute;
   display: inline-block;
   left: -20%;
-  top: 10px;
+  top: 0;
   font-size: 3.5em;
   color: var(--color-gblue);
 }
@@ -128,28 +163,25 @@ main.index::after {
   width: 40%;
   height: 95%;
   position: absolute;
-  top: 0;
+  top: 1em;
   right: 0;
   z-index: -1;
   overflow-y: hidden;
-}
-
-main h1 {
-  margin-left: 1em;
-  font-size: 2.5em;
-  font-weight: 500;
-  color: var(--color-gblue);
+  animation: FadeInOnLoad 4s ease-out;
 }
 
 main.index h1 {
   position: relative;
   text-align: center;
+  font-size: 2.8em;
   height: 7em;
   padding: 2em 0 2em 0;
+  margin-left: 0;
+  animation: FadeInOnLoad 2s ease-out;
 }
 
-main.index h1 b {
-  color: var(--color-dblue);
+main.index {
+  margin-left: 0;
 }
 
 main .cta {
@@ -173,17 +205,18 @@ main a {
 main .link1 {
   border: solid 2px var(--color-dblue);
   line-height: 0;
-  margin-bottom: 1em;
+  margin: 0 1em 1em 1em;
+  animation: FadeInOnLoad 6s;
+}
+
+main .link1 p,
+main .link2 p {
+  font-size: 1em;
+  animation: FadeInOnLoad 6s;
 }
 
 main address {
   line-height: 0;
-}
-
-main .info h2,
-p,
-a {
-  margin-left: 1em;
 }
 
 main address .address {
@@ -202,10 +235,23 @@ main aside {
   display: none;
 }
 
-main#pricelist table {
-  padding: 0 1em 0 1em;
-  margin: 1em 0 1em 0;
-  width: 100%;
+main#pricelist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main table {
+  margin: .5em 2em;
+  min-width: 20em;
+  max-width: 25em;
+}
+
+main table caption {
+  text-align: left;
+  font-weight: 500;
+  padding-top: 1em;
+  font-size: 1.2em;
 }
 
 main table td {
@@ -228,15 +274,25 @@ footer {
   grid-column: 1/-1;
   width: 100%;
   background-color: var(--color-gblue);
-  color: var(--color-lpink);
   text-align: center;
   padding: .9em 1.5em;
   font-size: .9em;
   line-height: 30%;
 }
 
+footer p {
+  color: var(--color-lpink);
+}
+
 @media(min-height:733px) {
   footer.index {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media(min-width:613px) and (min-height:865px) {
+  footer {
     position: absolute;
     bottom: 0;
   }
@@ -296,5 +352,49 @@ footer {
   main aside figure a {
     font-size: 1em;
     padding: 0;
+  }
+}
+
+@media(min-width:60em) {
+  main.index::after {
+    content: "";
+    background: url("../assets/salon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 33%;
+    height: 30em;
+    position: absolute;
+    top: 2em;
+    left: 55%;
+    z-index: -1;
+    overflow-y: hidden;
+  }
+
+  main.index::before {
+    content: "";
+    background: url("../assets/nails2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 33%;
+    height: 30em;
+    position: absolute;
+    top: 3em;
+    left: 20%;
+    z-index: -2;
+    overflow: hidden;
+    transform: rotate(90deg);
+    animation: FadeInOnLoad 4s ease-out;
+  }
+}
+
+@keyframes FadeInOnLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(2em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
