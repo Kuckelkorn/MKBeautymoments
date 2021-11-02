@@ -1,0 +1,27 @@
+{
+  "name": "mkbeautymoments",
+  "version": "1.0.0",
+  "description": "**Auteur:** Remco Kuckelkorn",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuckelkorn/Frontend-Assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kuckelkorn/Frontend-Assignment/issues"
+  },
+  "homepage": "https://github.com/Kuckelkorn/Frontend-Assignment#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.3"
+  }
+}
